@@ -7,9 +7,10 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Empezamos</title>
+        <title>Empezamos ya</title>
     </head>
     <body>
+        eiiiii
         <?php
         // put your code here
         ?>
