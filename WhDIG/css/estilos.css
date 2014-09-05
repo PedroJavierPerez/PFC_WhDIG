@@ -1,0 +1,147 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04-sep-2014, 18:24:42
+    Author     : pedro
+*/
+
+/*body{
+    background-color: #f26666;
+    font-family: "Helvetica",Arial;
+    margin: 0px;
+}
+header{
+    border:solid;
+    height: 140px;
+    width: 100%;
+    float: left;
+    
+}
+#encabezado{
+    width: 95%;
+    margin: auto;
+    float: left;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+#logo{
+    float: left;
+    width: 300px;
+    padding: 10px 0px;
+   
+}
+#olvidarContraseña{
+    float: right;
+    
+    margin-bottom: 150px;
+    margin-right: 70px;
+}
+#name a{
+        text-align: right;
+        text-decoration: none;
+    }
+#logo h2{
+    
+    background:#f26666; 
+}
+#logo a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 40px;
+    
+}
+#encabezado hgroup h1{
+    text-align: left;
+    color: #fff6f1;
+    margin-left: 20px;
+    border-bottom: solid;
+    padding-bottom: 10px;
+    border-width: 1px;
+    border-color: #1d1d1d;
+    text-shadow: 0px 0px 30px rgba(0,0,0,0.5);
+    background-color: #66ff66;
+    
+}
+#name{
+
+    border:solid;
+    background: rgba(0,0,0,0.8);
+    float: right;
+    width: 25%;
+    height: 70px;
+    text-align: justify;
+    color: #fff;
+    border-color: #666666
+   
+}
+#name form{
+    float: top;
+    padding-top: 2px;
+}
+#btnEntrar{
+    border: none;
+    background-color: #fff;
+    padding: 4px;
+    margin: 20px;
+    cursor: pointer;
+    display: block;
+}
+#contrasena{
+    
+}*/
+
+/*body
+{
+           width:960px;
+           margin:15px auto;
+           font-family: Arial, "MS Trebuchet", sans-serif;
+}
+p
+{
+           margin:0 0 20px 0;
+}
+p, li
+{
+           line-height:20px;
+}
+           header#page_header nav ul, #page_footer nav ul
+{
+           list-style: none;
+           margin: 0;
+           padding: 0;
+}
+
+#page_header nav ul li, footer#page_footer nav ul li
+{
+           padding:0;
+           margin: 0 20px 0 0;
+           display:inline;
+}
+section#posts
+{
+           float: left;
+           width: 74%;
+}
+section#posts aside
+{
+           float: right;
+           width: 35%;
+           margin-left: 5%;
+           font-size: 20px;
+           line-height: 40px;
+}
+section#sidebar
+{
+           float: left;
+           width: 25%;
+}
+footer#page_footer
+{
+           clear: both;
+           width: 100%;
+           display: block;
+           text-align: center;
+}*/
