@@ -14,21 +14,25 @@ and open the template in the editor.-->
         <header>
             <div id="subheader">
                 <div id="logo"><p><a href="">WhDIG</a></p></div>
-                <div id="logo2"><h2>Where do I go?</h2></div>
+                
                 <div id="identificarse">
+                    <div id="formulario">
                     <form>
                         <label for ="email">Email:</label>
                         <input type="email" id="email" placeholder="Escribe tu email" required>
                         <label for ="contrasena">Contraseña:</label>
                         <input type="password" id="contrasena" placeholder="Escribe tu contraseña" required>
-                        <input type="submit" value="Entrar" id="btnEntrar">
+                        <input class="botones" type="submit" value="Entrar" id="btnEntrar">
                         
                             
                     </form>
                     <div id="olvidarContraseña">
                     <p><a href="">¿Has olvidado tu contraseña?</a></p>
                     </div>
+                    </div>
                 </div>
+                <div id="logo2"><h2>Where do I go?</h2></div>
+                <div id="Registrarse"> <input class="botones" id="btnRegistrarse" type="button" value="Regístrate"></div>
             </div>
        
         </header>
@@ -50,6 +54,7 @@ and open the template in the editor.-->
                             <li>Hora: 22:00</li>
                         </ul>
                         </p>
+                       
                     </article>
                     
                      <article>
