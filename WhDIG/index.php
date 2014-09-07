@@ -41,56 +41,80 @@ and open the template in the editor.-->
             <section id ="main">
                 <section id="bienvenidos">
                     <article>
-                        <hgroup><h3>Bienvenido a nuestra web de eventos</h3></hgroup>
+                        <hgroup><h3>Bienvenido a nuestra web de eventos de ocio</h3></hgroup>
                     </article>
                 </section>
                 <section id="eventos">
-                    <article>
+                   <a href=""> <article>
                         <hgroup><h4 class="titulo">Cerveza a 1€ (Jaén)</h4></hgroup>
                         <p>
                         <ul>
-                            <li>Jueves cerveza a 1€ desdelas 10:00 a las 12:00 de la noche.</li>
-                            <li>Fecha: 05/09/2014</li>
-                            <li>Hora: 22:00</li>
+                            <li>Jueves cerveza a 1€ desde las 22:00 a las 00:00 de la noche.
+                                No te lo puedes perder, habra muchisimos regalos y sorteos.</li>
+                            <li class="fechalista">+ Fecha: 05/09/2014</li>
+                            <li>+ Hora: 22:00</li>
                         </ul>
                         </p>
                        
-                    </article>
+                       </article></a>
                     
-                     <article>
+                    <a href=""> <article>
                         <hgroup><h4 class="titulo">Cerveza a 1€ (Jaén)</h4></hgroup>
                         <p>
                         <ul>
-                            <li>Jueves cerveza a 1€ desdelas 10:00 a las 12:00 de la noche.</li>
-                            <li>Fecha: 05/09/2014</li>
-                            <li>Hora: 22:00</li>
+                            <li>Jueves cerveza a 1€ desde las 22:00 a las 00:00 de la noche.</li>
+                            <li class="fechalista">+ Fecha: 05/09/2014</li>
+                            <li>+ Hora: 22:00</li>
                         </ul>
                         </p>
-                    </article>
+                        </article> </a>
                     
-                     <article>
+                     <a href=""><article>
                         <hgroup><h4 class="titulo">Cerveza a 1€ (Jaén)</h4></hgroup>
                         <p>
                         <ul>
-                            <li>Jueves cerveza a 1€ desdelas 10:00 a las 12:00 de la noche.</li>
-                            <li>Fecha: 05/09/2014</li>
-                            <li>Hora: 22:00</li>
+                            <li>Jueves cerveza a 1€ desde las 22:00 a las 00:00 de la noche.</li>
+                            <li class="fechalista">+ Fecha: 05/09/2014</li>
+                            <li>+ Hora: 22:00</li>
                         </ul>
                         </p>
-                    </article>
+                         </article></a>
                 </section>
                 
                 <aside>
-                    <section id="filtro">
-                        <hgroup><h5>Eventos de hoy:</h5></hgroup>
+                    <section class="filtro">
+<!--                        <hgroup><h5>Eventos de hoy:</h5></hgroup>
                         <ul>
                             <li><a href="">22:00 - Cerveza 1€</a></li>
                             <li><a href="">18:00 - Curso de cocina</a></li>
-                        </ul>
+                        </ul>-->
+                         <form>
+                             <label for ="fecha">Fecha:</label>
+                             <input type="date" id="fecha">
+                             <label for ="ciudad">Ciudad:</label>
+                             <input list="ciudad">
+                                 <datalist id="ciudad">
+                                     <option value="Valencia">
+                                     <option value="Madrid">  
+                                 </datalist>
+                             <label for ="tipo">Tipo:</label>
+                             <input list="tipo">
+                                 <datalist id="tipo">
+                                     <option value="Noche">
+                                     <option value="Deporte">  
+                                 </datalist>
+                             <label for ="local">Local:</label>
+                             <input list="local">
+                                 <datalist id="local">
+                                     <option value="Sala goa">
+                                     <option value=" La bodega">  
+                                 </datalist>
+                             <input class="botones" type="submit" value="Filtrar" id="btnFiltrar">
+                         </form>
                     </section>
                     
-                    <section id="filtro">
-                        <hgroup><h5>Suscribete:</h5></hgroup>
+                    <section class="filtro">
+                        <hgroup><h3>Suscríbete:</h3></hgroup>
                         <div id="informacion">
                             <form>
                                 <label><label for ="Iemail">Email:</label>
