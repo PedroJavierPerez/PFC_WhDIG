@@ -21,7 +21,7 @@ a{
     color: #fff;
 }
 #wrap{
-    width: 1100px;
+    width: 1000px;
     margin: auto;
     clear:both;
 }
@@ -42,13 +42,13 @@ header{
 
 }
 #subheader{
-    width: 1100px;
+    width: 1000px;
     margin: auto;
     
 }
 #logo{
     float: left;
-    width: 785px;
+    width: 685px;
     height: 80px;
     margin-top: 40px;
     
@@ -57,12 +57,15 @@ header{
     font-family: sourcesans-light;
     font-size: 70px;
     color: #000;
-    text-shadow: 0px 0px 20px rgba(0,0,0,1);
+    text-shadow: 0px 0px 10px rgba(0,0,0,1);
+        -moz-text-shadow: 0px 0px 10px rgba(0,0,0,1);   
+        -webkit-text-shadow: 0px 0px 10px rgba(0,0,0,1);
+    
         
 }
 #logo2{
     float: left;
-    width: 785px;
+    width: 685px;
     
     clear: both;
     padding-bottom: 5px;
@@ -80,9 +83,14 @@ header{
     width: 307px;
     float: left;
     text-align: justify;
-    border: solid;
-    border-color:#2d2d2d; 
-/*    box-shadow: 0px 0px 20px rgba(0,0,0,5);*/
+/*    border: solid;
+    border-color:#2d2d2d; */
+    border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+    box-shadow: 0px 2px 2px #000;
+        -moz-box-shadow: 0px 2px 2px #000;   
+        -webkit-box-shadow: 0px 2px 2px #000;
     margin-top: 5px;
 }
 #identificarse form #btnEntrar{
@@ -100,7 +108,9 @@ header{
     float: left;
 }
 .botones{
-   border-radius: 5px; 
+   border-radius: 5px;
+   font-family:sourcesans-light;
+   color: #000;
    
 }
 #Registrarse #btnRegistrarse{
@@ -117,7 +127,7 @@ header{
    float: left;
 }
 #bienvenidos{
-    width: 1060px;
+    width: 960px;
     float: left;
     padding: 20px;
     background-color: #66ff66;
@@ -151,12 +161,12 @@ header{
 /*EVENTOS*/
 
 #eventos{
-    width: 760px;
+    width: 740px;
     float: right;
 }
 
 #eventos article{
-    width: 750px;;
+    width: 730px;;
     float:left;
     margin-bottom: 20px;
     padding: 5px;
@@ -184,7 +194,8 @@ header{
 #eventos article ul li{
     color: #cccccc;
     text-align: justify;
-    font-size: 16px;
+    font-size: 17px;
+    font-family:sourcesans;
 }
 .fechalista{
     margin-top: 6px;
@@ -193,7 +204,7 @@ header{
 /*ASIDE*/
 
 aside{
-    width:280px;
+    width:220px;
     float:left;
     margin-right: 20px;
     background: #4d78b3;
@@ -209,14 +220,13 @@ aside{
 aside .filtro{
     margin-bottom: 10px;
     float: left;
-    width: 280px;
-    margin: auto;
+    width: 220px; 
     
 }
 aside .filtro h3{
     background: #cccccc;
     color:#4d78b3;
-    width:280px;
+    width:220px;
     padding: 10px 0px;
     text-align: center;
     font-weight: bold;
@@ -226,17 +236,45 @@ aside .filtro h3{
 .filtro form label{
     display: block;
     margin-top: 10px;
-}
-.filtro form input{
-    display: block;
+    font-family:sourcesans;
 }
 
 .filtro form #btnFiltrar{
     margin-top: 10px;
     margin-left: 70px;
+    display: block;
     
 }
 .filtro form{
     width: 200px;
     margin: auto;
+}
+.filtro #btnRecibir{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 13px;
+}
+#informacion{
+    border-top: solid 2px #0033cc;
+        
+}
+#informacion p{
+    margin-left: 10px;
+    font-family:sourcesans;
+}
+#copyright{
+    float:left;
+    width: 1000px;
+    margin: 10px 0px;
+    
+}
+#copyright p{
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    font-family: Arial,Helvetica,sans-serif;
+}
+#olvidarContraseña a{
+    color: #000;
 }

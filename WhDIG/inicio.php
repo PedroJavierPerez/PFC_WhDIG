@@ -1,51 +1,40 @@
 <!DOCTYPE html>
-
-<!--To change this license header, choose License Headers in Project Properties.
+<!--
+To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
-and open the template in the editor.-->
-
+and open the template in the editor.
+-->
 <html>
     <head>
         <meta charset="UTF-8">
         <meta name="description" content="Web de eventos de ocio">
         <meta name="keywords" content="evento,ocio,bar,deporte,pub">
         <title>WhDIG</title>
-        <link rel="stylesheet" type="text/css" href="css/estilos_principal.css">  
+        <link rel="stylesheet" type="text/css" href="css/estilos_principal.css">
+        <link rel="stylesheet" type="text/css" href="css/estilos_inicio.css">
     </head>
     <body>
         <header>
             <div id="subheader">
                 <div id="logo"><p><a href="">WhDIG</a></p></div>
                 
-                <div id="identificarse">
-                    <div id="formulario">
-                    <form>
-                        <label for ="email">Email:</label>
-                        <input type="email" id="email" placeholder="Escribe tu email" required>
-                        <label for ="contrasena">Contraseña:</label>
-                        <input type="password" id="contrasena" placeholder="Escribe tu contraseña" required>
-                        <input class="botones" type="submit" value="Entrar" id="btnEntrar">
-                        
-                            
-                    </form>
-                    <div id="olvidarContraseña">
-                    <p><a href="">¿Has olvidado tu contraseña?</a></p>
-                    </div>
-                    </div>
-                </div>
+               
                 <div id="logo2"><h2>Where do I go?</h2></div>
-                <div id="Registrarse"> <input class="botones" id="btnRegistrarse" type="button" value="Regístrate"></div>
+                 <nav>
+                     <ul>
+                         <li><a href="">Inicio</a></li>
+                         <li><a href="">Mi cuenta</a></li>
+                         <li><a href="">Asistencia a eventos</a></li>
+                         <li><a href="index.php">Salir</a></li>
+                    </ul>
+                </nav>
             </div>
        
         </header>
         
         <section id="wrap">
             <section id ="main">
-                <section id="bienvenidos">
-                    <article>
-                        <hgroup><h3>Bienvenido a nuestra web de eventos de ocio</h3></hgroup>
-                    </article>
-                </section>
+                
                 <section id="eventos">
                    <a href=""> <article>
                         <hgroup><h4 class="titulo">Cerveza a 1€ (Jaén)</h4></hgroup>
@@ -84,12 +73,21 @@ and open the template in the editor.-->
                 </section>
                 
                 <aside>
+                    
                     <section class="filtro">
-<!--                        <hgroup><h5>Eventos de hoy:</h5></hgroup>
+                        <div id="eventoshoy">
+                           <hgroup><h3>Eventos de hoy: 08/09/2014</h3></hgroup>
                         <ul>
                             <li><a href="">22:00 - Cerveza 1€</a></li>
                             <li><a href="">18:00 - Curso de cocina</a></li>
-                        </ul>-->
+                        </ul>
+                                
+                        </div>
+                        
+                    </section>
+                    
+                    <section class="filtro" id="idFiltro">
+                    
                          <form>
                              <label for ="fecha">Fecha:</label>
                              <input type="date" id="fecha">
@@ -115,44 +113,11 @@ and open the template in the editor.-->
                          </form>
                     </section>
                     
-                    <section class="filtro">
-                        <div id="informacion">
-                        <hgroup><h3>Suscríbete:</h3></hgroup>
-                        
-                            <form>
-                                <label for ="Iemail">Email:</label>
-                                <input type="email" id="Iemail" placeholder="Escribe tu email" required>
-                                <input class="botones" type="submit" value="Recibir" id="btnRecibir">
-                                <input  class="botones" type="submit" value="No Recibir" id="btnNoRecibir">
-                            </form>
-                            <p>
-                                Introduzca su email para recibir información de eventos o para dejar de recibirla.
-                            </p>
-                                
-                        </div>
-                        
-                    </section>
+                    
                     
                 </aside>
             </section>
-<!--            <footer>
-                <section id="acerca-de">
-                    <article>
-                        <hgroup><h3>Acerca de...</h3></hgroup>
-                        <p>lkndsfgkhsfdkjghskfdljgblkjsfdbgkdgdlkfgbdfkjg
-                        fghgfhgfhgfhdgfhfghdfghghgfhgfdhdghghghgfhdfhdgfhg
-                        dfghdhghgh</p>
-                    </article>
-                </section>
-                
-                <section id="redes-s">
-                    <div class="email"><a href="#"></a></div>
-                    <div class="twitter"><a href="#"></a></div>
-                    <div class="youtube"><a href="#"></a></div>
-                    <div class="facebook"><a href="#"></a></div>
-                </section>
- 
-            </footer>-->
+
             <div id="copyright"><p>Copyright © 2014 | Pedro Javier Pérez Mora</p></div>
         </section>
                
@@ -162,11 +127,3 @@ and open the template in the editor.-->
         ?>
     </body>
 </html>
-
-
-
-
-
-
-
-
