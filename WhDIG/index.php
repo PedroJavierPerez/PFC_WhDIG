@@ -47,7 +47,7 @@ and open the template in the editor.-->
                     </article>
                 </section>
                 <section id="eventos">
-                   <a href=""> <article>
+<!--                   <a href=""> <article>
                         <hgroup><h4 class="titulo">Cerveza a 1€ (Jaén)</h4></hgroup>
                         <p>
                         <ul>
@@ -69,18 +69,19 @@ and open the template in the editor.-->
                             <li>+ Hora: 22:00</li>
                         </ul>
                         </p>
-                        </article> </a>
+                        </article> </a>-->
                     
-                     <a href=""><article>
-                        <hgroup><h4 class="titulo">Cerveza a 1€ (Jaén)</h4></hgroup>
+                     <!--<a href=""><article>-->
+                             <?php include("./PHP/cargar_eventos.php"); ?>
+<!--                        <hgroup><h4 class="titulo">Cerveza a 1€ (Jaén)</h4></hgroup>
                         <p>
                         <ul>
                             <li>Jueves cerveza a 1€ desde las 22:00 a las 00:00 de la noche.</li>
                             <li class="fechalista">+ Fecha: 05/09/2014</li>
                             <li>+ Hora: 22:00</li>
                         </ul>
-                        </p>
-                         </article></a>
+                        </p>-->
+                         <!--</article></a>-->
                 </section>
                 
                 <aside>
@@ -93,18 +94,35 @@ and open the template in the editor.-->
                          <form>
                              <label for ="fecha">Fecha:</label>
                              <input type="date" id="fecha">
+                              <label for ="provincia">Provincia:</label>
+                              <input list ="provincia" >
+                              <datalist id="provincia" >
+                                     
+                                     <?php include("./PHP/sel_provincia.php"); ?>
+
+                            
+                             </datalist>
                              <label for ="ciudad">Ciudad:</label>
                              <input list="ciudad">
-                                 <datalist id="ciudad">
-                                     <option value="Valencia">
-                                     <option value="Madrid">  
+                                 <datalist id="ciudad" >
+                                     
+                                     <?php
+                                     $id= "Albacete";
+                                     include("./PHP/sel_ciudad.php");
+                                     ?> 
+                                   <!--$id = $_POST['provincia'];-->
+                                     
+                                     
                                  </datalist>
                              <label for ="tipo">Tipo:</label>
                              <input list="tipo">
-                                 <datalist id="tipo">
-                                     <option value="Noche">
-                                     <option value="Deporte">  
-                                 </datalist>
+                            
+                             <datalist id="tipo" >
+                                     
+                                    
+
+                            
+                             </datalist>
                              <label for ="local">Local:</label>
                              <input list="local">
                                  <datalist id="local">
