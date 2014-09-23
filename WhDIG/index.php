@@ -10,7 +10,9 @@ and open the template in the editor.-->
         <meta name="description" content="Web de eventos de ocio">
         <meta name="keywords" content="evento,ocio,bar,deporte,pub">
         <title>WhDIG</title>
-        <link rel="stylesheet" type="text/css" href="css/estilos_principal.css">  
+        <link rel="stylesheet" type="text/css" href="css/estilos_principal.css">
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="cambio_filtroProvincia.js"></script>
     </head>
     <body>
         <header>
@@ -95,25 +97,23 @@ and open the template in the editor.-->
                              <label for ="fecha">Fecha:</label>
                              <input type="date" id="fecha">
                               <label for ="provincia">Provincia:</label>
-                              <input list ="provincia" >
+                              <input list ="provincia" name="pro">
                               <datalist id="provincia" >
                                      
-                                     <?php include("./PHP/sel_provincia.php"); ?>
+                                     <?php include("./PHP/cargar_provincia.php"); ?>
 
                             
                              </datalist>
                              <label for ="ciudad">Ciudad:</label>
-                             <input list="ciudad">
+                             <input list="ciudad" name="ciu" >
                                  <datalist id="ciudad" >
                                      
-                                     <?php
-                                     $id= "Albacete";
-                                     include("./PHP/sel_ciudad.php");
-                                     ?> 
-                                   <!--$id = $_POST['provincia'];-->
+                                     <?php include("./PHP/cargar_ciudad.php");?> 
+                                   
                                      
                                      
                                  </datalist>
+                             
                              <label for ="tipo">Tipo:</label>
                              <input list="tipo">
                             

@@ -13,6 +13,7 @@ function conectarse(){
     $bd="whdig";
     
     $conectar = new mysqli($servidor,$usuario,$password,$bd);
+   
         return $conectar;
 
 }
