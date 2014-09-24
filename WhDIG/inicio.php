@@ -101,7 +101,20 @@ and open the template in the editor.
                              <input list="tipo">
                                  <datalist id="tipo">
                                      <option value="Noche">
-                                     <option value="Deporte">  
+                                     <option value="Bares">
+                                     <option value="Pubs">
+                                     <option value="Deporte">
+                                     <option value="Charlas y Conferencias">
+                                     <option value="Conciertos">
+                                     <option value="Cursos">    
+                                     <option value="Espectáculos">
+                                     <option value="Exposiciones">
+                                     <option value="Ferias">
+                                     <option value="Libros">
+                                     <option value="Cine">
+                                     <option value="Teatro">
+                                     <option value="Hoteles">
+                                     <option value="Otros">
                                  </datalist>
                              <label for ="local">Local:</label>
                              <input list="local">

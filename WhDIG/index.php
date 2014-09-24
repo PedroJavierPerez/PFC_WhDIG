@@ -115,19 +115,31 @@ and open the template in the editor.-->
                                  </datalist>
                              
                              <label for ="tipo">Tipo:</label>
-                             <input list="tipo">
+                             <input list="tipo" name="tip">
                             
                              <datalist id="tipo" >
                                      
-                                    
+                                     <option value="Noche">
+                                     <option value="Bares">
+                                     <option value="Pubs">
+                                     <option value="Deporte">
+                                     <option value="Charlas y Conferencias">
+                                     <option value="Conciertos">
+                                     <option value="Cursos">    
+                                     <option value="Espectáculos">
+                                     <option value="Exposiciones">
+                                     <option value="Ferias">
+                                     <option value="Libros">
+                                     <option value="Cine">
+                                     <option value="Teatro">
+                                     <option value="Hoteles">
+                                     <option value="Otros">
 
-                            
                              </datalist>
                              <label for ="local">Local:</label>
-                             <input list="local">
+                             <input list="local" name="loc">
                                  <datalist id="local">
-                                     <option value="Sala goa">
-                                     <option value=" La bodega">  
+                                    <?php include("./PHP/cargar_negocios.php");?>  
                                  </datalist>
                              <input class="botones" type="submit" value="Filtrar" id="btnFiltrar">
                          </form>
