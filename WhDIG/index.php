@@ -11,7 +11,8 @@ and open the template in the editor.-->
         <meta name="keywords" content="evento,ocio,bar,deporte,pub">
         <title>WhDIG</title>
         <link rel="stylesheet" type="text/css" href="css/estilos_principal.css">
-        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="./Jquery/jquery-1.11.1.js"></script> 
+        <!--<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>-->
         <script src="cambio_filtroProvincia.js"></script>
     </head>
     <body>
@@ -93,9 +94,11 @@ and open the template in the editor.-->
                             <li><a href="">22:00 - Cerveza 1€</a></li>
                             <li><a href="">18:00 - Curso de cocina</a></li>
                         </ul>-->
-                         <form>
-                             <label for ="fecha">Fecha:</label>
-                             <input type="date" id="fecha">
+                         <form id= "formFiltro">
+                             <label for ="fechaInicio">Desde:</label>
+                             <input type="date" id="fechaInicio">
+                             <label for ="fechaInicio">Hasta:</label>
+                             <input type="date" id="fechaFin">
                               <label for ="provincia">Provincia:</label>
                               <input list ="provincia" name="pro">
                               <datalist id="provincia" >

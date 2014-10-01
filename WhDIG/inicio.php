@@ -12,6 +12,8 @@ and open the template in the editor.
         <title>WhDIG</title>
         <link rel="stylesheet" type="text/css" href="css/estilos_principal.css">
         <link rel="stylesheet" type="text/css" href="css/estilos_inicio.css">
+        <script type="text/javascript" src="./Jquery/jquery-1.11.1.js"></script>
+        <script src="cambio_filtroProvincia.js"></script>
     </head>
     <body>
         <header>
@@ -36,7 +38,7 @@ and open the template in the editor.
             <section id ="main">
                 
                 <section id="eventos">
-                   <a href=""> <article>
+<!--                   <a href=""> <article>
                         <hgroup><h4 class="titulo">Cerveza a 1€ (Jaén)</h4></hgroup>
                         <p>
                         <ul>
@@ -69,14 +71,15 @@ and open the template in the editor.
                             <li>+ Hora: 22:00</li>
                         </ul>
                         </p>
-                         </article></a>
+                         </article></a>-->
+                <?php include("./PHP/cargar_eventos.php"); ?>
                 </section>
                 
                 <aside>
                     
                     <section class="filtro">
                         <div id="eventoshoy">
-                           <hgroup><h3>Eventos de hoy: 08/09/2014</h3></hgroup>
+                           <hgroup><h3>Eventos de hoy: 24/09/2014</h3></hgroup>
                         <ul>
                             <li><a href="">22:00 - Cerveza 1€</a></li>
                             <li><a href="">18:00 - Curso de cocina</a></li>
@@ -91,6 +94,14 @@ and open the template in the editor.
                          <form>
                              <label for ="fecha">Fecha:</label>
                              <input type="date" id="fecha">
+                             <label for ="provincia">Provincia:</label>
+                              <input list ="provincia" name="pro">
+                              <datalist id="provincia" >
+                                     
+                                     <?php include("./PHP/cargar_provincia.php"); ?>
+
+                            
+                             </datalist>
                              <label for ="ciudad">Ciudad:</label>
                              <input list="ciudad">
                                  <datalist id="ciudad">

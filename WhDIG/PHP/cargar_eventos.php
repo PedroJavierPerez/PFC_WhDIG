@@ -8,7 +8,7 @@
 
 include("conexion.php");
 
-$consulta="SELECT * FROM evento ORDER BY Id_evento DESC";
+$consulta="SELECT Nombre, Descripcion, Hora, Id_negocio, Fecha FROM evento ORDER BY Id_evento DESC";
 
 $ejecutar_consulta = $conexion->query($consulta);
 

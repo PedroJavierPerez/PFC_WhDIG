@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-src="http://code.jquery.com/jquery-1.11.0.min.js";
+src="./Jquery/jquery-1.11.1.js";
 $(document).ready(function(){
  
  
@@ -43,20 +43,33 @@ $("input[name=loc]").click(function(){
     
 });
 
-$("#btnFiltrar").click(function(){
-    var fecha = $("#fecha").val();
+//$("#btnFiltrar").click(function(){
+//    var fecha = $("#fecha").val();
+//    var provincia = $('input[name=pro]').val();
+//    var municipio = $('input[name=ciu]').val();
+//    var tipo = $('input[name=tip]').val();
+//    var local = $('input[name=loc]').val();
+//    
+//     $("#eventos").load("./PHP/filtrar_eventos.php", { fecha:fecha, provincia:provincia, municipio:municipio, tipo:tipo, local:local}, function(){
+//// alert("fecha:"+fecha+"provincia:"+provincia+"municipio"+municipio+"tipo"+tipo+"local"+local);
+//            
+//        });
+//});
+
+   $("#formFiltro").submit(function(){
+    var fechaI = $("#fechaInicio").val();
+    var fechaF = $("#fechaFin").val();
     var provincia = $('input[name=pro]').val();
     var municipio = $('input[name=ciu]').val();
     var tipo = $('input[name=tip]').val();
     var local = $('input[name=loc]').val();
     
-     $("#eventos").load("./PHP/filtrar_eventos.php", { fecha:fecha, provincia:provincia, municipio:municipio, tipo:tipo, local:local}, function(){
- alert("fecha:"+fecha+"provincia:"+provincia+"municipio"+municipio+"tipo"+tipo+"local"+local);
+     $("#eventos").load("./PHP/filtrar_eventos.php", { fechaI:fechaI,fechaF:fechaF, provincia:provincia, municipio:municipio, tipo:tipo, local:local}, function(){
+// alert("fechaI:"+fechaI+"fechaF:"+fechaF+"provincia:"+provincia+"municipio"+municipio+"tipo"+tipo+"local"+local);
             
         });
-});
-
-    
+        return false;
+}); 
 
 
 });   
