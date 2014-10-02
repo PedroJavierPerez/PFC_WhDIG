@@ -14,8 +14,12 @@ function conectarse(){
     
     $conectar = new mysqli($servidor,$usuario,$password,$bd);
    
+    if($conectar->connect_errno){
+        printf("Connect failed: %s\n",$conectar->connect_error);
+        exit();
+    }else{
         return $conectar;
-
+    }
 }
 
 $conexion = conectarse();

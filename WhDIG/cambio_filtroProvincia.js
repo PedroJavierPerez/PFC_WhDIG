@@ -43,19 +43,6 @@ $("input[name=loc]").click(function(){
     
 });
 
-//$("#btnFiltrar").click(function(){
-//    var fecha = $("#fecha").val();
-//    var provincia = $('input[name=pro]').val();
-//    var municipio = $('input[name=ciu]').val();
-//    var tipo = $('input[name=tip]').val();
-//    var local = $('input[name=loc]').val();
-//    
-//     $("#eventos").load("./PHP/filtrar_eventos.php", { fecha:fecha, provincia:provincia, municipio:municipio, tipo:tipo, local:local}, function(){
-//// alert("fecha:"+fecha+"provincia:"+provincia+"municipio"+municipio+"tipo"+tipo+"local"+local);
-//            
-//        });
-//});
-
    $("#formFiltro").submit(function(){
     var fechaI = $("#fechaInicio").val();
     var fechaF = $("#fechaFin").val();
@@ -71,5 +58,29 @@ $("input[name=loc]").click(function(){
         return false;
 }); 
 
+$("#formSuscribir").submit(function(e){ 
+    suscribir();
+    $("#Iemail").val("");
+    return false;
+})
 
 });   
+
+function suscribir(){
+    
+    var email = $("#Iemail").val();
+    
+    var data = "email="+email;
+    
+    $.ajax({
+        url:"./PHP/suscribir.php",
+        type:"POST",
+        data: data,
+        beforeSend: function() {
+            console.log("enviando datos a DB")
+        },
+        success: function(resp) {
+            console.log("resp")
+        }
+    })
+}

@@ -152,7 +152,7 @@ and open the template in the editor.-->
                         <div id="suscribir" class="informacion">
                         <div class="cabecera"><hgroup><h3>Suscribir:</h3></hgroup><span class="triangulo"></span></div>
                         
-                            <form>
+                            <form id="formSuscribir">
                                 <label for ="Iemail">Email:</label>
                                 <input type="email" id="Iemail" placeholder="Escribe tu email" required>
                                 <input class="botones" type="submit" value="Recibir" id="btnRecibir">
@@ -170,7 +170,7 @@ and open the template in the editor.-->
                         
                             <form>
                                 <label for ="Iemail">Email:</label>
-                                <input type="email" id="Iemail" placeholder="Escribe tu email" required>
+                                <input type="email" id="NIemail" placeholder="Escribe tu email" required>
                                 
                                 <input  class="botones" type="submit" value="No Recibir" id="btnNoRecibir">
                             </form>
