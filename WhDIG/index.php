@@ -149,18 +149,32 @@ and open the template in the editor.-->
                     </section>
                     
                     <section class="filtro">
-                        <div id="informacion">
-                        <hgroup><h3>Suscríbete:</h3></hgroup>
+                        <div id="suscribir" class="informacion">
+                        <div class="cabecera"><hgroup><h3>Suscribir:</h3></hgroup><span class="triangulo"></span></div>
                         
                             <form>
                                 <label for ="Iemail">Email:</label>
                                 <input type="email" id="Iemail" placeholder="Escribe tu email" required>
                                 <input class="botones" type="submit" value="Recibir" id="btnRecibir">
+                                
+                            </form>
+                            
+                        </div>
+                        
+                    </section>
+                    
+                    <section class="filtro">
+                        <div id="EliminarSuscribir" class="informacion">
+                            <div class="cabecera"><hgroup><h3>Eliminar Suscripción:</h3></hgroup><span class="triangulo"></span></div>
+                        <!--<hgroup><h3>Eliminar Suscripción:</h3></hgroup>-->
+                        
+                            <form>
+                                <label for ="Iemail">Email:</label>
+                                <input type="email" id="Iemail" placeholder="Escribe tu email" required>
+                                
                                 <input  class="botones" type="submit" value="No Recibir" id="btnNoRecibir">
                             </form>
-                            <p>
-                                Introduzca su email para recibir información de eventos o para dejar de recibirla.
-                            </p>
+                            
                                 
                         </div>
                         

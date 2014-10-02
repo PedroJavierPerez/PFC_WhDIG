@@ -8,7 +8,8 @@
 
 include("conexion.php");
 
-$consulta="SELECT Nombre, Descripcion, Hora, Id_negocio, Fecha FROM evento ORDER BY Id_evento DESC";
+$fechaActual = date("Y-m-d");
+$consulta="SELECT Nombre, Descripcion, Hora, Id_negocio, Fecha FROM evento WHERE Fecha >= '".$fechaActual."' ORDER BY Id_evento DESC";
 
 $ejecutar_consulta = $conexion->query($consulta);
 

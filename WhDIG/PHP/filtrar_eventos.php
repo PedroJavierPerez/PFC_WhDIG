@@ -22,9 +22,17 @@ $consulta = "SELECT * FROM evento WHERE 1";
 $consulta2 = "SELECT * FROM negocio WHERE 1";
 //}
 if(($fechaI != NULL)&&($fechaF != NULL)){
+    $fechaActual = date("Y-m-d");
+    if($fechaI < $fechaActual){
+        $fechaI = $fechaActual;
+    }
     $consulta.=" AND (Fecha BETWEEN '".$fechaI."' AND '" .$fechaF."')";
 }else{
     If($fechaI != NULL){
+        $fechaActual = date("Y-m-d");
+        if($fechaI < $fechaActual){
+          $fechaI = $fechaActual;
+        }
         $fechaAux = "2099-12-31";
         $consulta.=" AND (Fecha BETWEEN '".$fechaI."' AND '" .$fechaAux."')";
     }else{
@@ -84,11 +92,11 @@ if(($provincia != NULL)||($municipio != NULL)||($local != NULL)){
                 echo "</article></a>";
              }
          }else{
-          echo "<p class='NoFiltro'>No existe ningun evento que cumpla las condiciones de filtrado 2</p>";
+          echo "<p class='NoFiltro'>No se encontraron eventos que cumplan las condiciones de filtrado.</p>";
          }
          }
      }else{
-          echo "<p class='NoFiltro'>No existe ningun evento que cumpla las condiciones de filtrado 1</p>";
+          echo "<p class='NoFiltro'>No se encontraron eventos que cumplan las condiciones de filtrado.</p>";
      }
     
 }else{
@@ -127,7 +135,7 @@ if(($provincia != NULL)||($municipio != NULL)||($local != NULL)){
          }  
          }
      }else{
-         echo "<p class='NoFiltro'>No existe ningun evento que cumpla las condiciones de filtrado 3</p>";
+         echo "<p class='NoFiltro'>No se encontraron eventos que cumplan las condiciones de filtrado.</p>";
      }
     
 }

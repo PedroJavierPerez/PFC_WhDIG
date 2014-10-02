@@ -226,7 +226,7 @@ aside .filtro{
 aside .filtro h3{
     background: #cccccc;
     color:#4d78b3;
-    width:220px;
+    width:100%;
     padding: 10px 0px;
     text-align: center;
     font-weight: bold;
@@ -239,27 +239,27 @@ aside .filtro h3{
     font-family:sourcesans;
 }
 
-.filtro form #btnFiltrar{
+/*.filtro form #btnFiltrar{
     margin-top: 10px;
     margin-left: 70px;
     display: block;
     
-}
+}*/
 .filtro form{
     width: 200px;
     margin: auto;
 }
-.filtro #btnRecibir{
-    margin-bottom: 10px;
-    margin-top: 10px;
-    margin-left: 15px;
-    margin-right: 13px;
+.filtro .botones{
+    
+    display: block;
+    margin: auto;
+    margin-top: 7px;
 }
-#informacion{
+.informacion{
     border-top: solid 2px #0033cc;
         
 }
-#informacion p{
+.informacion p{
     margin-left: 10px;
     font-family:sourcesans;
 }
@@ -277,4 +277,29 @@ aside .filtro h3{
 }
 #olvidarContraseña a{
     color: #000;
+}
+.NoFiltro{
+   color: #fff;
+   font-size: 18px;
+   text-align: center;
+}
+.cabecera{
+    position: relative;
+    margin-left: -20px;
+    width: 110%;
+ 
+    -moz-box-shadow: 1px 1px 3px #292929;
+    -webkit-box-shadow: 1px 1px 3px #292929;
+    box-shadow: 1px 1px 3px #292929;
+    
+}
+.triangulo{
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 10px 10px 0;
+    border-color: transparent #B8B8B8 transparent transparent;
+    top: 103%;
+    left: 0;
+    position: absolute;
 }
