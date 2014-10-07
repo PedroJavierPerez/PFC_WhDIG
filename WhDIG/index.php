@@ -14,6 +14,9 @@ and open the template in the editor.-->
         <script type="text/javascript" src="./Jquery/jquery-1.11.1.js"></script> 
         <!--<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>-->
         <script src="cambio_filtroProvincia.js"></script>
+<!--        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css">
+        <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>-->
     </head>
     <body>
         <header>
@@ -22,7 +25,7 @@ and open the template in the editor.-->
                 
                 <div id="identificarse">
                     <div id="formulario">
-                    <form>
+                    <form id="formAutentificar">
                         <label for ="email">Email:</label>
                         <input type="email" id="email" placeholder="Escribe tu email" required>
                         <label for ="contrasena">Contraseña:</label>
@@ -50,50 +53,14 @@ and open the template in the editor.-->
                     </article>
                 </section>
                 <section id="eventos">
-<!--                   <a href=""> <article>
-                        <hgroup><h4 class="titulo">Cerveza a 1€ (Jaén)</h4></hgroup>
-                        <p>
-                        <ul>
-                            <li>Jueves cerveza a 1€ desde las 22:00 a las 00:00 de la noche.
-                                No te lo puedes perder, habra muchisimos regalos y sorteos.</li>
-                            <li class="fechalista">+ Fecha: 05/09/2014</li>
-                            <li>+ Hora: 22:00</li>
-                        </ul>
-                        </p>
-                       
-                       </article></a>
-                    
-                    <a href=""> <article>
-                        <hgroup><h4 class="titulo">Cerveza a 1€ (Jaén)</h4></hgroup>
-                        <p>
-                        <ul>
-                            <li>Jueves cerveza a 1€ desde las 22:00 a las 00:00 de la noche.</li>
-                            <li class="fechalista">+ Fecha: 05/09/2014</li>
-                            <li>+ Hora: 22:00</li>
-                        </ul>
-                        </p>
-                        </article> </a>-->
-                    
-                     <!--<a href=""><article>-->
+
                              <?php include("./PHP/cargar_eventos.php"); ?>
-<!--                        <hgroup><h4 class="titulo">Cerveza a 1€ (Jaén)</h4></hgroup>
-                        <p>
-                        <ul>
-                            <li>Jueves cerveza a 1€ desde las 22:00 a las 00:00 de la noche.</li>
-                            <li class="fechalista">+ Fecha: 05/09/2014</li>
-                            <li>+ Hora: 22:00</li>
-                        </ul>
-                        </p>-->
-                         <!--</article></a>-->
+
                 </section>
                 
                 <aside>
                     <section class="filtro">
-<!--                        <hgroup><h5>Eventos de hoy:</h5></hgroup>
-                        <ul>
-                            <li><a href="">22:00 - Cerveza 1€</a></li>
-                            <li><a href="">18:00 - Curso de cocina</a></li>
-                        </ul>-->
+
                          <form id= "formFiltro">
                              <label for ="fechaInicio">Desde:</label>
                              <input type="date" id="fechaInicio">
@@ -168,7 +135,7 @@ and open the template in the editor.-->
                             <div class="cabecera"><hgroup><h3>Eliminar Suscripción:</h3></hgroup><span class="triangulo"></span></div>
                         <!--<hgroup><h3>Eliminar Suscripción:</h3></hgroup>-->
                         
-                            <form>
+                            <form id="formEliminarSuscribir">
                                 <label for ="Iemail">Email:</label>
                                 <input type="email" id="NIemail" placeholder="Escribe tu email" required>
                                 
@@ -182,24 +149,7 @@ and open the template in the editor.-->
                     
                 </aside>
             </section>
-<!--            <footer>
-                <section id="acerca-de">
-                    <article>
-                        <hgroup><h3>Acerca de...</h3></hgroup>
-                        <p>lkndsfgkhsfdkjghskfdljgblkjsfdbgkdgdlkfgbdfkjg
-                        fghgfhgfhgfhdgfhfghdfghghgfhgfdhdghghghgfhdfhdgfhg
-                        dfghdhghgh</p>
-                    </article>
-                </section>
-                
-                <section id="redes-s">
-                    <div class="email"><a href="#"></a></div>
-                    <div class="twitter"><a href="#"></a></div>
-                    <div class="youtube"><a href="#"></a></div>
-                    <div class="facebook"><a href="#"></a></div>
-                </section>
- 
-            </footer>-->
+
             <div id="copyright"><p>Copyright © 2014 | Pedro Javier Pérez Mora</p></div>
         </section>
                

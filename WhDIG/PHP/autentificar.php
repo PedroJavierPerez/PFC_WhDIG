@@ -9,22 +9,19 @@
 include("./conexion.php");
 
 $email = utf8_decode($_POST["email"]);
+$pass = utf8_decode($_POST["pass"]);
 
-$consulta1 = "SELECT * FROM usuario_no_registrado WHERE email = '".$email."'";
+
+$consulta1 = "SELECT * FROM usuario WHERE Email = '".$email."' AND Contrasena ='".$pass."'";
 $ejecutar_consulta1 = $conexion->query($consulta1);
 $row1 = mysqli_num_rows($ejecutar_consulta1);
 
-if($row1 == 0){
-$consulta2 = "INSERT INTO usuario_no_registrado (email) VALUES ('".$email."')";
-$ejecutar_consulta2 = $conexion->query($consulta2);
+if($row1 != 0){
+ 
+ echo "True";
 
-if($ejecutar_consulta2==True){
-    echo "Registro exitoso";
 }else{
-    echo "Registro falló";
-}
-}else{
-    echo "Email ya existente";
+  echo "False";
 }
 
-mysqli_close($conexion);
+//mysqli_close($conexion);

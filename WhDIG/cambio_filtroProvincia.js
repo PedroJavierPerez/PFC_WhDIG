@@ -58,10 +58,24 @@ $("input[name=loc]").click(function(){
         return false;
 }); 
 
-$("#formSuscribir").submit(function(e){ 
+$("#formSuscribir").submit(function(){ 
     suscribir();
     $("#Iemail").val("");
     return false;
+})
+
+$("#formEliminarSuscribir").submit(function(){ 
+    eliminarSuscribir();
+    $("#NIemail").val("");
+    return false;
+})
+
+$("#formAutentificar").submit(function(){ 
+   
+    autentificar();
+            
+    return false;
+
 })
 
 });   
@@ -81,6 +95,70 @@ function suscribir(){
         },
         success: function(resp) {
             console.log("resp")
+            
         }
     })
+}
+
+function eliminarSuscribir(){
+    
+    var email = $("#NIemail").val();
+    
+    var data = "email="+email;
+    
+    $.ajax({
+        url:"./PHP/eliminarSuscripcion.php",
+        type:"POST",
+        data: data,
+        beforeSend: function() {
+            console.log("enviando datos a DB")
+        },
+        success: function(resp) {
+            console.log("resp");
+            alert(resp);
+        }
+    })
+}
+
+function autentificar(){
+    
+    var email = $("#email").val();
+    var pass = $("#contrasena").val();
+   
+//    var data = "email= "+email+" &pass= "+pass;
+ var data = { 
+
+                "email" : email, 
+                "pass" : pass 
+
+        };
+    
+    $.ajax({
+        url:"./PHP/autentificar.php",
+        type:"POST",
+        data: data,
+//        async : true,
+//        cache: false,
+        beforeSend: function() {
+            
+            console.log("enviando datos a DB");
+
+        },
+        success: function(resp) {
+            console.log("resp");
+         
+            if(resp==="True"){
+                location.href= "./inicio.php";
+            }else{
+                alert("No existe usuario o contraseña");
+            }
+   
+     
+   
+    }
+        
+                    
+    })
+            
+    
 }

@@ -18,6 +18,7 @@ function conectarse(){
         printf("Connect failed: %s\n",$conectar->connect_error);
         exit();
     }else{
+        
         return $conectar;
     }
 }
