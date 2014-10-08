@@ -24,14 +24,30 @@ and open the template in the editor.
    
     
     background-color: #2d2d2d;
-    padding: 0px 10px 20px 10px;
+    padding: 0px 10px 5px 10px;
     border-radius: 5px;
         -moz-border-radius: 5px;
         -webkit-border-radius: 5px;
 }
-#eventoshoy ul{  
+/*#eventoshoy ul{  
  line-height: 25px;
+}*/
+#eventoshoy #ideventoshoy{
+    margin: 5px 5px 5px 5px;
+    background: #666666;
+    border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
 }
+
+#eventoshoy #ideventoshoy p{
+    font-size: 13px;
+    color: #000;
+}
+#eventoshoy li{
+    padding: 5px 5px 5px 5px;
+}
+
 #idFiltro{
     border-top: solid 2px #0033cc;
 }

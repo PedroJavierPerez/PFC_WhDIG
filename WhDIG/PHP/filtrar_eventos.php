@@ -76,9 +76,13 @@ if(($provincia != NULL)||($municipio != NULL)||($local != NULL)){
              While($registro2 = $ejecutar_consulta2->fetch_assoc()){
         
                 $nombre_evento = utf8_encode($registro2["Nombre"]);
-                $hora = utf8_encode($registro2["Hora"]);
+                    $hora_string= utf8_encode($registro2["Hora"]);
+                    $hora_time = date_create($hora_string);
+                $hora = date_format($hora_time, 'G:i');
                 $descripcion = utf8_encode($registro2["Descripcion"]);
-                $fech = utf8_encode($registro2["Fecha"]);
+                    $fecha_string = utf8_encode($registro2["Fecha"]);
+                    $fecha_date=date_create($fecha_string);
+                $fech=date_format($fecha_date, 'd-m-Y');
 
                 echo "<a href=''><article>";
                 echo "<hgroup><h4 class='titulo'>$nombre_evento ($prov)</h4></hgroup>";
@@ -108,9 +112,13 @@ if(($provincia != NULL)||($municipio != NULL)||($local != NULL)){
          while($registro = $ejecutar_consulta->fetch_assoc()){
          $Idnegocio = utf8_encode($registro["Id_negocio"]);
          $nombre_evento = utf8_encode($registro["Nombre"]);
-         $hora = utf8_encode($registro["Hora"]);
+            $hora_string= utf8_encode($registro["Hora"]);
+            $hora_time = date_create($hora_string);
+         $hora = date_format($hora_time, 'G:i'); 
          $descripcion = utf8_encode($registro["Descripcion"]);
-         $fech = utf8_encode($registro["Fecha"]);
+            $fecha_string = utf8_encode($registro["Fecha"]);
+            $fecha_date=date_create($fecha_string);
+                $fech=date_format($fecha_date, 'd-m-Y');
 //         echo "id:" . $Idnegocio . "<br>";
 
          $consultaAux = $consulta2." AND Id_negocio = '".$Idnegocio."'";

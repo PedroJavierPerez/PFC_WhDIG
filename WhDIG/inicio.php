@@ -13,7 +13,7 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="css/estilos_principal.css">
         <link rel="stylesheet" type="text/css" href="css/estilos_inicio.css">
         <script type="text/javascript" src="./Jquery/jquery-1.11.1.js"></script>
-        <script src="cambio_filtroProvincia.js"></script>
+        <script src="eventos_inicio.js"></script>
     </head>
     <body>
         <header>
@@ -38,40 +38,7 @@ and open the template in the editor.
             <section id ="main">
                 
                 <section id="eventos">
-<!--                   <a href=""> <article>
-                        <hgroup><h4 class="titulo">Cerveza a 1€ (Jaén)</h4></hgroup>
-                        <p>
-                        <ul>
-                            <li>Jueves cerveza a 1€ desde las 22:00 a las 00:00 de la noche.
-                                No te lo puedes perder, habra muchisimos regalos y sorteos.</li>
-                            <li class="fechalista">+ Fecha: 05/09/2014</li>
-                            <li>+ Hora: 22:00</li>
-                        </ul>
-                        </p>
-                       
-                       </article></a>
-                    
-                    <a href=""> <article>
-                        <hgroup><h4 class="titulo">Cerveza a 1€ (Jaén)</h4></hgroup>
-                        <p>
-                        <ul>
-                            <li>Jueves cerveza a 1€ desde las 22:00 a las 00:00 de la noche.</li>
-                            <li class="fechalista">+ Fecha: 05/09/2014</li>
-                            <li>+ Hora: 22:00</li>
-                        </ul>
-                        </p>
-                        </article> </a>
-                    
-                     <a href=""><article>
-                        <hgroup><h4 class="titulo">Cerveza a 1€ (Jaén)</h4></hgroup>
-                        <p>
-                        <ul>
-                            <li>Jueves cerveza a 1€ desde las 22:00 a las 00:00 de la noche.</li>
-                            <li class="fechalista">+ Fecha: 05/09/2014</li>
-                            <li>+ Hora: 22:00</li>
-                        </ul>
-                        </p>
-                         </article></a>-->
+
                 <?php include("./PHP/cargar_eventos.php"); ?>
                 </section>
                 
@@ -79,10 +46,10 @@ and open the template in the editor.
                     
                     <section class="filtro">
                         <div id="eventoshoy">
-                           <hgroup><h3>Eventos de hoy: 24/09/2014</h3></hgroup>
+                            <hgroup><h3>Eventos de hoy:<br><?php echo date("d-m-Y");?></h3></hgroup>
                         <ul>
-                            <li><a href="">22:00 - Cerveza 1€</a></li>
-                            <li><a href="">18:00 - Curso de cocina</a></li>
+                            <?php include("./PHP/cargar_eventosHoy.php"); ?>
+                           
                         </ul>
                                 
                         </div>
@@ -91,10 +58,12 @@ and open the template in the editor.
                     
                     <section class="filtro" id="idFiltro">
                     
-                         <form>
-                             <label for ="fecha">Fecha:</label>
-                             <input type="date" id="fecha">
-                             <label for ="provincia">Provincia:</label>
+                        <form id= "formFiltro">
+                             <label for ="fechaInicio">Desde:</label>
+                             <input type="date" id="fechaInicio">
+                             <label for ="fechaInicio">Hasta:</label>
+                             <input type="date" id="fechaFin">
+                              <label for ="provincia">Provincia:</label>
                               <input list ="provincia" name="pro">
                               <datalist id="provincia" >
                                      
@@ -103,14 +72,20 @@ and open the template in the editor.
                             
                              </datalist>
                              <label for ="ciudad">Ciudad:</label>
-                             <input list="ciudad">
-                                 <datalist id="ciudad">
-                                     <option value="Valencia">
-                                     <option value="Madrid">  
+                             <input list="ciudad" name="ciu" >
+                                 <datalist id="ciudad" >
+                                     
+                                     <?php include("./PHP/cargar_ciudad.php");?> 
+                                   
+                                     
+                                     
                                  </datalist>
+                             
                              <label for ="tipo">Tipo:</label>
-                             <input list="tipo">
-                                 <datalist id="tipo">
+                             <input list="tipo" name="tip">
+                            
+                             <datalist id="tipo" >
+                                     
                                      <option value="Noche">
                                      <option value="Bares">
                                      <option value="Pubs">
@@ -126,12 +101,12 @@ and open the template in the editor.
                                      <option value="Teatro">
                                      <option value="Hoteles">
                                      <option value="Otros">
-                                 </datalist>
+
+                             </datalist>
                              <label for ="local">Local:</label>
-                             <input list="local">
+                             <input list="local" name="loc">
                                  <datalist id="local">
-                                     <option value="Sala goa">
-                                     <option value=" La bodega">  
+                                    <?php include("./PHP/cargar_negocios.php");?>  
                                  </datalist>
                              <input class="botones" type="submit" value="Filtrar" id="btnFiltrar">
                          </form>

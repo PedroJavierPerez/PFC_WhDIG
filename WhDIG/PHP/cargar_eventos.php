@@ -17,8 +17,12 @@ while ($registro = $ejecutar_consulta->fetch_assoc()){
 //    echo "<option value='".$registro["provincia"]."'> " .$registro["provincia"]."</option>";
     $nombre_evento= utf8_encode($registro["Nombre"]);
     $descripcion= utf8_encode($registro["Descripcion"]);
-    $fecha= utf8_encode($registro["Fecha"]);
-    $hora= utf8_encode($registro["Hora"]);
+        $fech= utf8_encode($registro["Fecha"]);
+        $fec=date_create($fech);
+    $fecha=date_format($fec, 'd-m-Y');
+        $hora_string= utf8_encode($registro["Hora"]);
+        $hora_time = date_create($hora_string);
+    $hora = date_format($hora_time, 'G:i');
     $Idnegocio = utf8_encode($registro["Id_negocio"]);
     
     $consulta2="SELECT * FROM negocio WHERE $Idnegocio = Id_negocio";

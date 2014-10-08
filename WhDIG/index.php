@@ -13,10 +13,8 @@ and open the template in the editor.-->
         <link rel="stylesheet" type="text/css" href="css/estilos_principal.css">
         <script type="text/javascript" src="./Jquery/jquery-1.11.1.js"></script> 
         <!--<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>-->
-        <script src="cambio_filtroProvincia.js"></script>
-<!--        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css">
-        <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>-->
+        <script src="eventos_index.js"></script>
+
     </head>
     <body>
         <header>
