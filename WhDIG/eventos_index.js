@@ -57,11 +57,35 @@ $(document).ready(function(){
         autentificar();
         return false;
     })
+    
+    
+    $("#eventos a").click(function() {
+ 
+        
+        ID = $(this).attr("id");     
+//        mostrarDetallesEvento();
+        $("#detallesEvento").load("./PHP/cargar_detallesEvento.php", {id_evento:ID}, function(){
+
+          
+        });
+        
+        return false;
+    })
+
+       
+    
 
 }); 
 
 
 // FUNCIONES
+
+function mostrarDetallesEvento(){
+   location.href= "./detallesEventoUNR.php";
+    
+    
+}
+
 
 
 function cambioProvincia(){
@@ -122,7 +146,7 @@ function eliminarSuscribir(){
         },
         success: function(resp) {
             console.log("resp");
-            alert(resp);
+            
         }
     })
 }

@@ -9,12 +9,13 @@
 include("conexion.php");
 
 $fechaActual = date("Y-m-d");
-$consulta="SELECT Nombre, Descripcion, Hora, Id_negocio, Fecha FROM evento WHERE Fecha >= '".$fechaActual."' ORDER BY Id_evento DESC";
+$consulta="SELECT Id_evento, Nombre, Descripcion, Hora, Id_negocio, Fecha FROM evento WHERE Fecha >= '".$fechaActual."' ORDER BY Id_evento DESC";
 
 $ejecutar_consulta = $conexion->query($consulta);
 
 while ($registro = $ejecutar_consulta->fetch_assoc()){
 //    echo "<option value='".$registro["provincia"]."'> " .$registro["provincia"]."</option>";
+    $Idevento= utf8_encode($registro["Id_evento"]);
     $nombre_evento= utf8_encode($registro["Nombre"]);
     $descripcion= utf8_encode($registro["Descripcion"]);
         $fech= utf8_encode($registro["Fecha"]);
@@ -31,7 +32,7 @@ while ($registro = $ejecutar_consulta->fetch_assoc()){
     $provincia= utf8_encode($registro2["Provincia"]);
 
     
-    echo "<a href=''><article>";
+    echo "<a id='$Idevento' href=''><article>";
     echo "<hgroup><h4 class='titulo'>$nombre_evento ($provincia)</h4></hgroup>";
     echo "<p>";
     echo "<ul>";
