@@ -51,9 +51,9 @@ $(document).ready(function(){
         return false;
     })
 
-    $("eventos a").click(function(){
+$("#eventos a").click(function(){
  
-        alert("mierda");
+        
         var ID = $(this).attr("id");
         document.cookie ='var='+ID;
         mostrarDetallesEvento();
