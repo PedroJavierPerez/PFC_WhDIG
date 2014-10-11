@@ -51,29 +51,22 @@ $(document).ready(function(){
         return false;
     })
 
+    $("eventos a").click(function(){
+ 
+        alert("mierda");
+        var ID = $(this).attr("id");
+        document.cookie ='var='+ID;
+        mostrarDetallesEvento();
+        
+        return false;
+    })
+    
  //Obtiene la contraseña y email de usuario para validar y iniciar sesión.
     $("#formAutentificar").submit(function(){ 
    
         autentificar();
         return false;
-    })
-    
-    
-    $("#eventos a").click(function() {
- 
-        
-        ID = $(this).attr("id");     
-//        mostrarDetallesEvento();
-        $("#detallesEvento").load("./PHP/cargar_detallesEvento.php", {id_evento:ID}, function(){
-
-          
-        });
-        
-        return false;
-    })
-
-       
-    
+    })  
 
 }); 
 
