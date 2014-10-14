@@ -11,9 +11,14 @@ and open the template in the editor.-->
         <meta name="keywords" content="evento,ocio,bar,deporte,pub">
         <title>WhDIG</title>
         <link rel="stylesheet" type="text/css" href="css/estilos_principal.css">
-        <script type="text/javascript" src="./Jquery/jquery-1.11.1.js"></script> 
+        <link rel="stylesheet" type="text/css" href="css/jquery.lightbox-0.5.css">
+        <link rel="stylesheet" type="text/css" href="css/detalles.css">
+        <script type="text/javascript" src="./Jquery/jquery-1.11.1.js"></script>
+        <script type="text/javascript" src="./Jquery/jquery.lightbox-0.5.js"></script>
+        
         <!--<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>-->
-        <script src="eventos_index.js"></script>
+        <script type="text/javascript" src="eventos_index.js"></script>
+        <script type="text/javascript" src="Jquery/detalles.js"></script>
 
     </head>
     <body>
