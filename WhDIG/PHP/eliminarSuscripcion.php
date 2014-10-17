@@ -27,4 +27,3 @@ if($ejecutar_consulta2==True){
     echo "El email dado no esta suscrito";
 }
 
-//mysqli_close($conexion);

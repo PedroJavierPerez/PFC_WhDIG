@@ -72,3 +72,5 @@ $registro3 = $ejecutar_consulta3->fetch_assoc();
     echo "</p>";
     echo "</div>";
     echo "</article>";
+
+   

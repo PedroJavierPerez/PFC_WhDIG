@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-//include("conexion.php");
+//include("./PHP/conexion.php");
 
 $fechaActual= date("Y-m-d");
 
@@ -34,3 +34,4 @@ $row = mysqli_num_rows($ejecutar_consulta);
                
     }
 }
+

@@ -1,0 +1,91 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16-oct-2014, 14:17:53
+    Author     : pedro
+*/
+
+#logo{
+
+    margin-top: 0px;
+       
+}
+
+#tituloRegistro{
+    width: 100%;
+   
+    }
+
+#tituloRegistro p{
+    
+    font-size: 25px;
+    
+    background: rgb(96,116,242); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(96,116,242,1) 0%, rgba(64,67,135,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(96,116,242,1)), color-stop(100%,rgba(64,67,135,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(96,116,242,1) 0%,rgba(64,67,135,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(96,116,242,1) 0%,rgba(64,67,135,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(96,116,242,1) 0%,rgba(64,67,135,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(96,116,242,1) 0%,rgba(64,67,135,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6074f2', endColorstr='#404387',GradientType=0 ); /* IE6-9 */
+    
+    padding: 10px;
+    color: #fff;
+    
+    border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+}
+
+#articleFormulario{
+    
+    
+    width: 38%;
+    margin: auto;
+    
+}
+
+#articleFormulario label{
+    color:#fff;
+}
+
+form #tabla2{
+    width: 100%
+    /*line-height: 42px;*/
+}
+form #tabla3{
+    width: 100%
+    /*line-height: 42px;*/
+}
+form #tabla4{
+    width: 100%
+    /*line-height: 42px;*/
+}
+
+form .fila{
+    width: 26%
+}
+
+#articleFormulario form{
+    line-height: 42px;
+    padding: 15px;
+}
+
+#articleFormulario .inp{
+    width: 98%;
+}
+
+#articleFormulario{
+    background: #87C489;
+    margin-top: 30px;
+}
+
+#articleFormulario form .pInformacion{
+    
+   font-size: 20px;
+   border-bottom: solid 2px #0033cc;
+   margin-bottom: 15px;
+}

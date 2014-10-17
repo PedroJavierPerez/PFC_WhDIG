@@ -16,7 +16,8 @@ $tipo = utf8_decode($_POST["tipo"]);
 $local = utf8_decode($_POST["local"]);
 
 //if(($fechaI != NULL)||($fechaF != NULL)||($tipo != NULL)){
-$consulta = "SELECT * FROM evento WHERE 1";
+$fechaActual = date("Y-m-d");
+$consulta = "SELECT * FROM evento WHERE Fecha >= '".$fechaActual."'";
 //}
 //if(($provincia != NULL)||($municipio != NULL)||($local != NULL)){
 $consulta2 = "SELECT * FROM negocio WHERE 1";
@@ -149,3 +150,4 @@ if(($provincia != NULL)||($municipio != NULL)||($local != NULL)){
      }
     
 }
+

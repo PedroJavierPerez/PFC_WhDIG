@@ -5,6 +5,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+//include("./PHP/conexion.php");
 
 $consulta="SELECT * FROM negocio ORDER BY Id_negocio";
 $ejecutar_consulta = $conexion->query($consulta);
@@ -16,3 +17,4 @@ while ($registro = $ejecutar_consulta->fetch_assoc()){
     echo "<option value='$nombre_negocio'>$nombre_negocio</option>";
     
 }
+

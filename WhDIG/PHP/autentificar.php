@@ -24,4 +24,3 @@ if($row1 != 0){
   echo "False";
 }
 
-//mysqli_close($conexion);

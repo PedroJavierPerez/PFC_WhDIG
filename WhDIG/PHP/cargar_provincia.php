@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-//include("conexion.php");
+require_once("conexion.php");
 
 $consulta="SELECT * FROM provincias ORDER BY provincia";
 $ejecutar_consulta = $conexion->query($consulta);

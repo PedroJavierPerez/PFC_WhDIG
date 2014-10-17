@@ -42,31 +42,37 @@ $(document).ready(function(){
         suscribir();
         $("#Iemail").val("");
         return false;
-    })
+    });
     
  //Obtiene el valor del imput eliminar suscribir y permite eliminar la suscripción del usuario.
     $("#formEliminarSuscribir").submit(function(){ 
         eliminarSuscribir();
         $("#NIemail").val("");
         return false;
-    })
+    });
 
-$("#eventos a").click(function(){
+    $("#eventos a").click(function(){
  
-        
         var ID = $(this).attr("id");
+        alert(ID);
         document.cookie ='var='+ID;
         mostrarDetallesEvento();
         
         return false;
-    })
+    });
+    
     
  //Obtiene la contraseña y email de usuario para validar y iniciar sesión.
     $("#formAutentificar").submit(function(){ 
    
         autentificar();
         return false;
-    })  
+    });  
+    
+    $("#btnRegistrarse").click(function(){
+        
+      location.href= "./registrarse.php";
+    });
 
 }); 
 
@@ -141,7 +147,7 @@ function eliminarSuscribir(){
             console.log("resp");
             
         }
-    })
+    });
 }
 
 function autentificar(){
@@ -182,7 +188,7 @@ function autentificar(){
     }
         
                     
-    })
+    });
             
     
 }

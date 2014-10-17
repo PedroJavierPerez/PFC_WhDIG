@@ -43,3 +43,4 @@ while ($registro = $ejecutar_consulta->fetch_assoc()){
     echo "</p>";
     echo "</article></a>";
 }
+
