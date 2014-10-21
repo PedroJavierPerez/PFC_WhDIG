@@ -70,7 +70,7 @@ header{
     width: 685px;
     
     clear: both;
-    padding-bottom: 5px;
+    padding-bottom: 2px;
 }
 #logo2 h2{
     font-family: Kaushan;
@@ -101,8 +101,10 @@ header{
 }
     
 #identificarse #olvidarContraseña{
+   
     margin:auto;
-    width: 250px;
+    margin-top: 5px;
+    width: 220px;
     
 }
 #Registrarse{
@@ -112,6 +114,8 @@ header{
 }
 .botones{
    border-radius: 5px;
+     -moz-border-radius: 5px;
+     -webkit-border-radius: 5px;
    font-family:sourcesans-light;
    color: #000;
    
@@ -310,7 +314,9 @@ aside .filtro h3{
     position: absolute;
 }
 
-
+#identificarse #formulario #formAutentificar{
+    line-height: 29px;
+}
 
 // ESTILOS detallesEventoUNR.php
 

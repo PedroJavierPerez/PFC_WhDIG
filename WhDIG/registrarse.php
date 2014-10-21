@@ -13,13 +13,28 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="css/estilos_principal.css">
         <link rel="stylesheet" type="text/css" href="css/registrarse.css">
         <script type="text/javascript" src="./Jquery/jquery-1.11.1.js"></script>
-        <script src="eventos_inicio.js"></script>
+        <script type="text/javascript" src="registrarse.js"></script>
     </head>
     <body>
         <header>
             <div id="subheader">
                 <div id="logo"><p><a href="index.php">WhDIG</a></p></div>
-                
+                     <div id="identificarse">
+                    <div id="formulario">
+                    <form id="formAutentificar">
+                        <label for ="email">Email:</label>
+                        <input type="email" id="email" placeholder="Escribe tu email" required>
+                        <label for ="contrasena">Contraseña:</label>
+                        <input type="password" id="contrasena" placeholder="Escribe tu contraseña" required>
+                        <input class="botones" type="submit" value="Entrar" id="btnEntrar">
+                        
+                            
+                    </form>
+                    <div id="olvidarContraseña">
+                    <p><a href="">¿Has olvidado tu contraseña?</a></p>
+                    </div>
+                    </div>
+                </div>
                
                 <div id="logo2"><h2>Where do I go?</h2></div>
                 
@@ -29,21 +44,19 @@ and open the template in the editor.
         
         <section id="wrap">
             <section id ="main">
-                <section id="tituloRegistro">
-                    <article>
-                        <p>Formulario de registro</p>
-                    </article>
-                </section>
+               
                 <section id="formularioRegistro">
                     
+                        
+                   
                     <article id="articleFormulario">
-                    <form>
+                        <form id="formRegistro">
                        
-                            
+                          <p id="tituloRegistro">Formulario de registro</p>  
                            
                         <p class="pInformacion">Información requerida</p>
                        
-                       
+                        <div class="tablas">
                         <table id="tabla2">
                             
                       
@@ -53,21 +66,35 @@ and open the template in the editor.
                             </tr>
                         
                             <tr>
-                                <td class="fila"><label for ="email">Email:</label></td>
-                                <td><input class="inp" type="email" id="email" placeholder="Escriba su email" required></td>
+                                <td class="fila"><label for ="Remail">Email:</label></td>
+                                <td><input class="inp" type="email" id="Remail" placeholder="Escriba su email" required></td>
                             </tr>
                         <tr>
-                        <td class="fila"><label for ="contrasena">Contraseña:</label></td>
-                        <td><input class="inp" type="password" id="contrasena" placeholder="Escriba su contraseña" required></td>
+                        <td class="fila"><label for ="Rcontrasena">Contraseña:</label></td>
+                        <td><input class="inp" type="password" id="Rcontrasena" placeholder="Escriba su contraseña" required></td>
                         </tr>
                         </table>
                         <table id="tabla3">
                        <tr>
-                           <td><label for ="verificarContrasena">Verificar contraseña:</label></td>
-                           <td><input class="inp" type="password" id="VerificarContrasena" placeholder="Repita su contraseña" required></td>
+                           <td id="tdVerificar"><label for ="verificarContrasena">Verificar contraseña:</label></td>
+                           <td><input class="inp" type="password" id="verificarContrasena" placeholder="Repita su contraseña" required></td>
                        </tr>
                         </table>
                          <table id="tabla4">
+                             
+                               <tr>
+                        <td class="fila"><label for ="provincia">Provincia:</label></td>
+                        <td><input class="inp" list="provincia" name="prov" placeholder="Escriba su provincia" required></td>
+                        
+                            <datalist id="provincia" >
+                                     
+                                     <?php include("./PHP/cargar_provincia.php");?> 
+                                   
+                                     
+                                     
+                            </datalist>
+                        </tr>
+                             
                             <tr>
                         <td class="fila"><label for ="localidad">Localidad:</label></td>
                         <td><input class="inp" list="localidad" name="loc" placeholder="Escriba su localidad" required></td>
@@ -81,27 +108,16 @@ and open the template in the editor.
                             </datalist>
                             </tr>
                         
-                        <tr>
-                        <td class="fila"><label for ="provincia">Provincia:</label></td>
-                        <td><input class="inp" list="provincia" name="prov" placeholder="Escriba su provincia" required></td>
-                        
-                            <datalist id="provincia" >
-                                     
-                                     <?php include("./PHP/cargar_provincia.php");?> 
-                                   
-                                     
-                                     
-                            </datalist>
-                        </tr>
+                      
                        <tr>
                         <td class="fila"><label for ="genero">Genero:</label></td>
                         <td><input type="radio" name="genero" value="M" required/> M
                         <input type="radio" name="genero" value="F" required/> F </td>
                         </tr>
                         </table>
-                           
+                        </div>   
                         <p class="pInformacion">Información adicional</p>
-                        
+                        <div class="tablas">
                        <table id="tabla6">
                         <tr>
                         <td><label for ="fecha">Fecha de Nacimiento:</label></td>
@@ -110,9 +126,10 @@ and open the template in the editor.
                        </table>
                         <div id="divInformacion">
                         <label for ="informacion"></label>
-                        <input type="checkbox" name="informacion"/> Permitir recibir información.
+                        <input type="checkbox" id="informacion" name="informacion" value="1"/> Permitir recibir información.
                         </div>
-                        
+                        <input  class="botones" type="submit" value="Enviar datos" id="btnEnviarDatos">
+                        </div>
                     </form>
                     </article>
                 </section>
